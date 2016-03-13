@@ -21,7 +21,7 @@ class Hobbit
 	end
 
 	def rooms_of(hobbit)
-		hobbit.name
+		hobbit.rooms
 	end
 
 	def hobbit_has_ring?(hobbit)
@@ -49,4 +49,11 @@ frodo = Hobbit.new("Frodo", 3, true)
 samwise = Hobbit.new("Samwise", 2, false)
 
 puts frodo.name
+#puts frodo.rooms - ошибка т.к. метод защищенный
+# защищенные методы можно вызывать только изнутри объекта, снаружи возникает ошибка
+# другими словами любой хоббит может узнать количество своих комнат и комнат других хоббитов
+puts frodo.rooms_of(frodo)
+
+print "------------\n"
 puts samwise.name
+puts frodo.rooms_of(samwise)
