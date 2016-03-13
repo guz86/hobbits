@@ -42,3 +42,11 @@ class Hobbit
 		@has_ring
 	end
 end
+
+# cоздаем пару хоббитов
+
+frodo = Hobbit.new("Frodo", 3, true)
+samwise = Hobbit.new("Samwise", 2, false)
+
+puts frodo.name
+puts samwise.name
