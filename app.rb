@@ -28,6 +28,13 @@ class Hobbit
 		hobbit.has_ring?
 	end
 
+# вывод приватного метода через вызов публично в классе
+
+	def hobbit_ring
+		has_ring?
+	end
+
+
 	# защищенный метод
 	protected
 
@@ -62,5 +69,7 @@ print "------------\n"
 #puts frodo.has_ring?
 #puts frodo.hobbit_has_ring(frodo)
 #puts frodo.hobbit_has_ring(samwise)
-# доступ к приватным объектам возможен только из самого объекта, только один конкретный экземпляр класса знает информацию(использует метод или свойство)
-
+# доступ к приватным объектам возможен только внутри класса
+# вывод приватного метода через вызов публично в классе
+puts frodo.hobbit_ring
+puts samwise.hobbit_ring
