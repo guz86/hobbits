@@ -34,6 +34,10 @@ class Hobbit
 		has_ring?
 	end
 
+# статический метод
+	def self.location
+		return "Shie"
+	end
 
 	# защищенный метод
 	protected
@@ -70,6 +74,8 @@ print "------------\n"
 #puts frodo.hobbit_has_ring(frodo)
 #puts frodo.hobbit_has_ring(samwise)
 # доступ к приватным объектам возможен только внутри класса
-# вывод приватного метода через вызов публично в классе
+# вывод приватного метода через вызов публичного в классе
 puts frodo.hobbit_ring
 puts samwise.hobbit_ring
+# вывод статического метода, вызывается с приставкой Класса
+puts Hobbit.location
