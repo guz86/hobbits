@@ -57,3 +57,10 @@ puts frodo.rooms_of(frodo)
 print "------------\n"
 puts samwise.name
 puts frodo.rooms_of(samwise)
+print "------------\n"
+# кольцо в приватной областе, поэтому при попытке вызвать has_ring? или hobbit_has_ring? будет ошибка
+#puts frodo.has_ring?
+#puts frodo.hobbit_has_ring(frodo)
+#puts frodo.hobbit_has_ring(samwise)
+# доступ к приватным объектам возможен только из самого объекта, только один конкретный экземпляр класса знает информацию(использует метод или свойство)
+
